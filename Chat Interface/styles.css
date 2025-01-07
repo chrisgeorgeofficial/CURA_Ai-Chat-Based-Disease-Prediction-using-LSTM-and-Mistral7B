@@ -1,0 +1,255 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: #000000; /* Black background for the whole page */
+  color: #ffffff; /* White text color */
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #1c1c1c; /* Dark grey background for sidebar */
+  padding: 10px;
+  color: white;
+  overflow-y: auto;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #333333; /* Slightly lighter grey */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #262626; /* Darker grey for chat items */
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background-color: #444444; /* Lighter grey on hover */
+}
+
+.content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #1c1c1c; /* Dark grey for header */
+  color: white;
+  position: relative;
+}
+
+.header-content {
+  flex-grow: 1;
+}
+
+.user-avatar {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.user-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.chat-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000; /* Black background for chat area */
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chat-box {
+  flex-grow: 1;
+  padding-bottom: 10px;
+  overflow-y: auto;
+  border-bottom: 1px solid #333333; /* Grey border */
+}
+
+.message {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #333333; /* Dark grey background for messages */
+  color: white;
+  border-radius: 10px;
+  max-width: 60%;
+  word-wrap: break-word; /* Ensures text wraps within the container */
+  white-space: pre-wrap; /* Preserves whitespace and wraps text */
+}
+
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: black; /* Dark grey for input area */
+  border-radius: 0.5cm;
+}
+
+.input-area input {
+  flex-grow: 1;
+  padding: 10px;
+  background-color: #262626; /* Dark grey for input field */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  border-radius: 0.5cm;
+}
+
+.input-area button {
+  margin-left: 10px;
+  padding: 10px;
+  background-color: #333333; /* Dark grey button */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  border-radius: 0.5cm;
+}
+
+/* Greeting Styles */
+#greeting-area {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.greeting {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-size: 36px; /* Adjust size as needed */
+  margin-bottom: 10px; /* Adjust space below greeting */
+}
+
+.greeting-hello {
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    #7eb5f7,
+    #ff5e80
+  ); /* Gradient for 'Hello' */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.greeting-name {
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    #ff5e80,
+    #ffa5b3
+  ); /* Gradient for 'Chris' */
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-left: 5px; /* Adjust spacing between 'Hello' and the name */
+}
+
+.greeting-subtext {
+  font-size: 24px; /* Adjust size as needed */
+  color: #666666; /* Gray color for subtext */
+  margin-top: 0;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-avatar {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .chat-box {
+    border-bottom: none;
+  }
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 769px) {
+  .main-container {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 20%;
+    height: 100%;
+  }
+
+  .content {
+    width: 80%;
+  }
+
+  .header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .user-avatar {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+.user-avatar {
+  width: 40px; /* Set the width of the avatar */
+  height: 40px; /* Set the height of the avatar */
+  overflow: hidden; /* Hide overflow to ensure the image fits */
+  border-radius: 50%; /* Makes the avatar circular */
+  border-color: linear-gradient(60deg, red, blue) 1; /* Apply gradient to the border */
+  display: flex; /* Center the image */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  cursor: pointer;
+}
+
+.user-avatar img {
+  width: 100%; /* Make the image take the full width of the container */
+  height: 100%; /* Set height to 100% to fill the container */
+  object-fit: cover; /* Ensure the image covers the entire area */
+}
