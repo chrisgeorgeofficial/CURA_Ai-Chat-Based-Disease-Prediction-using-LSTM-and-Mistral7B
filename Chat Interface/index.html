@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CuraGPT</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Sidebar Section -->
+      <aside class="sidebar">
+        <button id="new-chat-btn">+ New Chat</button>
+        <ul id="chat-list">
+          <!-- Previous chats will be dynamically added here -->
+        </ul>
+      </aside>
+
+      <!-- Main Content Section -->
+      <div class="content">
+        <!-- Header Section -->
+        <header class="header">
+          <div class="header-content">
+            <h1>CuraGPT</h1>
+          </div>
+          <div class="user-avatar">
+            <img src="useravarthar.png" alt="User Avatar" id="user-avatar" />
+          </div>
+        </header>
+
+        <!-- Greeting Area (shown before chat starts) -->
+        <div id="greeting-area">
+          <div id="greeting" class="greeting">
+            <span class="greeting-hello">Hello,</span>
+            <span id="user-name" class="greeting-name">Chris</span>
+          </div>
+          <p id="greeting-subtext" class="greeting-subtext">
+            How can I help you today?
+          </p>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-area">
+          <div class="chat-box" id="chat-box">
+            <!-- Chat messages will be dynamically added here -->
+          </div>
+          <div class="input-area">
+            <input
+              type="text"
+              id="user-input"
+              placeholder="Type your prompt..."
+            />
+            <button id="send-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

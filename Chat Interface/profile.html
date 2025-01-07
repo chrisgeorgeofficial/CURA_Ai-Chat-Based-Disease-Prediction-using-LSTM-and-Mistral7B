@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile_styles.css" />
+  </head>
+  <body>
+    <div class="profile-container">
+      <button class="logout-btn" onclick="logOut()">Log Out</button>
+
+      <div class="profile-header">
+        <div class="profile-photo">
+          <img src="default-avatar.jpg" alt="User Photo" id="user-photo" />
+          <button class="change-photo-btn">Change</button>
+        </div>
+      </div>
+
+      <form id="profile-form">
+        <div class="form-group">
+          <label for="profile-name">Name:</label>
+          <input type="text" id="profile-name" placeholder="Enter your name" />
+        </div>
+
+        <div class="form-group">
+          <label for="profile-email">Email:</label>
+          <input
+            type="email"
+            id="profile-email"
+            placeholder="Enter your email"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="profile-phone">Phone:</label>
+          <input
+            type="tel"
+            id="profile-phone"
+            placeholder="Enter your phone number"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="profile-website">Website:</label>
+          <input type="url" id="profile-website" placeholder="Enter website" />
+        </div>
+
+        <div class="form-group">
+          <label for="profile-password">Password:</label>
+          <input
+            type="password"
+            id="profile-password"
+            placeholder="Enter new password"
+          />
+        </div>
+
+        <button type="button" id="save-profile-btn">Save</button>
+      </form>
+    </div>
+
+    <script>
+      function logOut() {
+        alert("You have been logged out.");
+        // Redirect or log out logic here
+      }
+    </script>
+  </body>
+</html>
