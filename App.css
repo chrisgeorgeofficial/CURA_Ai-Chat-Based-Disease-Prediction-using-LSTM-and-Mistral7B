@@ -1,0 +1,48 @@
+/* client/src/App.css */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif; /* Use a clean font */
+  background-color: #f8f9fa; /* Light background color */
+  min-height: 100vh; /* Full height for the app */
+  display: flex; /* Flexbox for centering */
+  flex-direction: column; /* Arrange children vertically */
+  justify-content: center; /* Center vertically */
+}
+
+nav {
+  margin: 20px;
+  padding: 10px;
+  background-color: #ffffff; /* White background for navigation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 5px; /* Rounded corners */
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold; /* Make links bold */
+  transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+nav a:hover {
+  color: #007bff; /* Blue color on hover */
+}
+
+h1 {
+  color: #333; /* Dark text for headings */
+}
+
+button {
+  cursor: pointer; /* Pointer cursor for buttons */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for buttons */
+  font-size: 16px; /* Font size for buttons */
+  transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  color: white; /* White text on hover */
+}
